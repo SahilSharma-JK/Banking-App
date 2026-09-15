@@ -21,7 +21,7 @@ import ToastHost from "./components/Toast";
 
 import "./App.css";
 
-
+const API_URL = import.meta.env.VITE_API_URL;
 // ============================================================
 // LOGIN PAGE
 // ============================================================
@@ -64,7 +64,7 @@ function LoginPage() {
 
       const response =
         await fetch(
-          "http://localhost:5000/api/auth/login",
+          `${API_URL}/auth/login`,
           {
             method: "POST",
 
@@ -127,7 +127,7 @@ function LoginPage() {
 
       const verifyResponse =
         await fetch(
-          "http://localhost:5000/api/auth/me",
+          `${API_URL}/auth/me`,
           {
             method: "GET",
 
